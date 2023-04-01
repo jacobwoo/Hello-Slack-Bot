@@ -23,7 +23,7 @@ def write_notification(message: dict):
     # Set the data to send
     event = message.get("event")
     params = {
-        "model": "gpt-3.5-turbo",
+        "model": "text-davinci-003",
         "user_id": event.get("user"),
         "number_of_messages_to_keep": number_of_messages_to_keep,
     }
