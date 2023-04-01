@@ -28,7 +28,7 @@ def write_notification(message: dict):
         "number_of_messages_to_keep": number_of_messages_to_keep,
     }
     content = "".join(event.get("text").split("> ")[1:])
-    data = {"role": "assistant", "content": content}
+    data = {"role": "user", "content": content}
 
     # Send messages to the ChatGPT server and respond to Slack
     response = requests.post(chat_server_url, headers=headers, json=data, params=params)
